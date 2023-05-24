@@ -1,0 +1,106 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Cuando queremos realizar animaciones en css, utilizamos la propiedad @keyframes. */
+@keyframes mianimacion{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    53%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes mianimacion{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    53%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-moz-keyframes mianimacion{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    53%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* En este momento se va a colocar el fondo de toda la pantalla  */
+#fondo1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/background4.jpg);
+    animation: mianimacion 24s linear 18s infinite;
+    -webkit-animation: mianimacion 24s linear  18s infinite;
+    -moz-animation: mianimacion 24s linear  18s infinite;
+}
+/* A continuación se va a colocar la segunda imagen, note que la
+ última también ocupa toda la pantalla, pero como esta es la segunda 
+ que colocamos en el orden que esta, entonces aparece esta y no la anterior */
+ /* Despues se coloca una linea de codigo que permite colocar la imagen 
+en el ancho de pantalla en la cual estas trabajando */
+#fondo2{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background: url(../img/background2.jpg);
+    background-size: cover; /*esto ajusta la imagen a la pantalla completa*/
+    animation: mianimacion 24s linear 12s infinite;
+    -webkit-animation: mianimacion 24s linear 12s infinite;
+    -moz-animation: mianimacion 24s linear  12s infinite;
+}
+/* Continuamos con el fondo 3, que tendrá las mismas características 
+que el fondo 2. y el fondo 4 tendrálas mismas características que el fondo 1 */
+#fondo3{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background: url(../img/background3.jpg);
+    background-size: cover; /*esto ajusta la imagen a la pantalla completa*/
+    animation: mianimacion 24s linear 6s infinite;
+    -webkit-animation: mianimacion 24s linear  6s infinite;
+    -moz-animation: mianimacion 24s linear  6s infinite;
+}
+#fondo4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/background.jpg);
+    animation: mianimacion 24s linear 5s infinite;
+    -webkit-animation: mianimacion 24s linear  5s infinite;
+    -moz-animation: mianimacion 24s linear  5s infinite;
+}
+
+ 
